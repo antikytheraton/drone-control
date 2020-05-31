@@ -3,15 +3,16 @@
         {
             "name": "Linux",
             "includePath": [
-                "/usr/local/arduino-1.8.12/hardware/arduino/avr/**",
-                "/usr/local/arduino-1.8.12/tools/**"
+                "/usr/local/arduino-1.8.12/tools/**",
+                "/usr/local/arduino-1.8.12/hardware/arduino/avr/**"
             ],
             "forcedInclude": [
                 "/usr/local/arduino-1.8.12/hardware/arduino/avr/cores/arduino/Arduino.h"
             ],
+            "intelliSenseMode": "gcc-x64",
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "c11",
-            "cppStandard": "c++17"
+            "cppStandard": "gnu++14"
         }
     ],
     "version": 4
