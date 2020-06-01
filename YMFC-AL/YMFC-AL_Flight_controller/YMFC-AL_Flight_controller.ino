@@ -71,11 +71,15 @@ boolean gyro_angles_set;
 //Setup routine
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void setup(){
-  //Serial.begin(57600);
+  Serial.begin(57600);
   //Copy the EEPROM data for fast access data.
   for(start = 0; start <= 35; start++)eeprom_data[start] = EEPROM.read(start);
   start = 0;                                                                //Set start back to zero.
   gyro_address = eeprom_data[32];                                           //Store the gyro address in the variable.
+
+  Serial.print("gyro_address = ");
+  Serial.print(gyro_address);
+  Serial.print("\n");
 
   Wire.begin();                                                             //Start the I2C as master.
 
@@ -555,4 +559,3 @@ void set_gyro_registers(){
 
   }  
 }
-

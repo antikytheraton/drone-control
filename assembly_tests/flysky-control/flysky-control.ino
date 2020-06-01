@@ -1,3 +1,7 @@
+/*
+ * RC CONTROL SETUP
+ */
+
 // Declaring variables
 byte last_channel_1, last_channel_2, last_channel_3, last_channel_4;
 int receiver_input_channel_1, receiver_input_channel_2, receiver_input_channel_3, receiver_input_channel_4;
