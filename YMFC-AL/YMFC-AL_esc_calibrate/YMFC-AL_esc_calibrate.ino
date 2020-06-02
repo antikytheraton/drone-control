@@ -74,6 +74,9 @@ void setup(){
 
   gyro_address = eeprom_data[32];                                                       //Store the gyro address in the variable.
 
+  Serial.print("Gyro address: ");
+  Serial.print(gyro_address);
+
   set_gyro_registers();                                                                 //Set the specific gyro registers.
 
   //Check the EEPROM signature to make sure that the setup program is executed.
@@ -518,10 +521,3 @@ void gyro_signalen(){
   acc_z = acc_axis[eeprom_data[30] & 0b00000011];                //Set acc_z to the correct axis that was stored in the EEPROM.
   if(eeprom_data[30] & 0b10000000)acc_z *= -1;                   //Invert acc_z if the MSB of EEPROM bit 30 is set.
 }
-
-
-
-
-
-
-
